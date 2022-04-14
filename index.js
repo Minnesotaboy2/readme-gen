@@ -4,7 +4,7 @@ const fs = require('fs');
 
 const generatemd = ({ project, description, installation, usage, credits, license, features, struggles, github, githubRepo, deployed }) =>
     `
-    #${project}
+# ${project}
 
 ## Description
 
@@ -33,11 +33,11 @@ ${features}
 ${struggles}
 
 ### Links
-${github}
+Github Page ${github}
 
-${githubRepo}
+Github repo ${githubRepo}
 
-${deployed}`;
+ Live Link ${deployed}`;
 
 inquirer
 
@@ -56,30 +56,45 @@ inquirer
             type: 'input',
             name: 'installation',
             message: 'What are the installation instructions?',
-        },       
+        },
         {
             type: 'input',
             name: 'usage',
             message: 'How do you use this app?',
-        },        
+        },
         {
             type: 'input',
             name: 'credits',
             message: 'List any collaborators with their link, third party assets, tutorials, sources.',
-        },        
-        // {
-            // type: 'input',
-            // name: 'license',
-            // message: 'Put license information here',
-    // const licenses = [MIT, Apache, ISC],
-    // const MIT = require('./licenses/MIT'),
-    // const Apache = require('./licenses/apache'),
-    // const ISC = require('./licenses/ISC'),
-        // },
+        },
+        {
+            type: 'list',
+            choices: [
+                {
+                    key: "Apache 2.0",
+                    value: "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)",
+                },
+
+                {
+                    key: "IPL 1.0",
+                    value: "[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)",
+                },
+                {
+                    key: "MIT",
+                    value: "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+                },
+                {
+                    key: "ISC",
+                    value: "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)",
+                },
+            ],
+            name: 'license',
+            message: 'Put license information here'
+        },
         {
             type: 'input',
             name: 'features',
-            message: 'Describe any special or unique features of this application here/',
+            message: 'Describe any special or unique features of this application here.',
         },
         {
             type: 'input',
@@ -106,7 +121,7 @@ inquirer
         const readmeContent = generatemd(answers);
 
         fs.writeFile('README.md', readmeContent, (err) =>
-        err ? console.log(err) : console.log('Successfully created README')
+            err ? console.log(err) : console.log('Successfully created README')
         );
     })
     // const license = ['MIT', 'Apache', 'ISC']
