@@ -35,7 +35,7 @@ ${struggles}
 ### Links
 Github Page ${github}
 
-Github repo ${githubRepo}
+Github Repository ${githubRepo}
 
  Live Link ${deployed}`;
 

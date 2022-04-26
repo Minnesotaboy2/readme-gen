@@ -11,7 +11,7 @@ Clone the repository, make sure you have all the files.
 
 ### How to use
 
-Right click on the files in the folder, type in "node index.js" and then it will start to prompt you so all you have to do is type your response and hit the enter key, select license with arrow keys and then enter on the sesired license.
+Right click on the files in the folder, select "Open in Integrated Terminal", type in "node index.js" on the terminal and then it will start to prompt you so all you have to do is type your response and hit the enter key, select license with arrow keys and then enter on the desired license.
 
 ### Credits
 
@@ -32,6 +32,6 @@ I had a hard Time with inetegrating the license into the application initially, 
 ### Links
 Github Page https://github.com/Minnesotaboy2
 
-Github repo https://github.com/Minnesotaboy2/readme-gen
+Github Repository https://github.com/Minnesotaboy2/readme-gen
 
- Live Link https://drive.google.com/file/d/1_xNUa748qL1GZjQ6QCM3MzcqWEn9Yvfs/view
+ Video Demonstration Link https://drive.google.com/file/d/1_xNUa748qL1GZjQ6QCM3MzcqWEn9Yvfs/view
